@@ -4,3 +4,13 @@
   width: 85%;
 }
 
+.header {
+  margin: 50px;
+}
+
+@media(max-width: 770px) {
+  .container {
+    width: 100%;  
+  }
+}
+

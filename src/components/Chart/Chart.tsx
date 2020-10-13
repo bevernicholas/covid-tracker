@@ -25,15 +25,14 @@ const Chart: React.FC<Props> = ({data: {confirmed, recovered, deaths, lastUpdate
     <Line
       data={{
         labels: dailyData.map(({ date } : {date: any}) => new Date(date).toLocaleDateString()),
-        // labels: ['Infected', 'Deaths'],
         datasets: [{
           data: dailyData.map(({ confirmed } : {confirmed: any}) => confirmed),
-          label: 'Infected',
+          label: 'Infected Cases US',
           borderColor: '#3333ff',
           fill: true
         }, {
           data: dailyData.map(({ deaths } : {deaths: any}) => deaths),
-          label: 'Deaths',
+          label: 'Deaths US',
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
           fill: true
@@ -43,7 +42,7 @@ const Chart: React.FC<Props> = ({data: {confirmed, recovered, deaths, lastUpdate
   ) : null;
 
   const barChart = confirmed ? (
-    <Bar 
+    <Bar
     data={{
       labels: ['Infected', 'Recovered', 'Deaths'],
       datasets: [{

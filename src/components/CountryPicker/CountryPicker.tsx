@@ -23,7 +23,7 @@ const CountryPicker: React.FC<Props> = ({handleCountryChange}) => {
   return (
     <FormControl className={styles.formControl}>
       <NativeSelect defaultValue='' onChange={(e) => handleCountryChange(e.target.value)}>
-        <option value='global'>Global</option>
+        <option value=''>Select a Country</option>
         {countries.map((country: string, i: number) => <option key={i} value={country}>{country}</option>)}
       </NativeSelect>
     </FormControl>
